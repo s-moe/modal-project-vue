@@ -1,7 +1,10 @@
 <template>
   <h1>{{ title }}</h1>
-  <input type="text" ref="name" />
-  <Modal header="Sign Up for the Gievaway!" text="Grab your ninja swag!" />
+  <p>Welcome...</p>
+  <div v-if="showModal">
+    <Modal :header="header" :text="text" theme="sale" @close="toggleModal" />
+  </div>
+  <button @click="toggleModal">open modal</button>
 </template>
 
 <script>
@@ -13,7 +16,15 @@ export default {
   data() {
     return {
       title: "My first vue app",
+      header: "Sign up for the Giveaway!",
+      text: "Grab your ninja swag!",
+      showModal: false,
     };
+  },
+  methods: {
+    toggleModal() {
+      this.showModal = !this.showModal;
+    },
   },
 };
 </script>
