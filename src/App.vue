@@ -1,19 +1,19 @@
 <template>
-  <h1>{{title}}</h1>
-  <input type="text" ref="name">
-  <Modal />
+  <h1>{{ title }}</h1>
+  <input type="text" ref="name" />
+  <Modal header="Sign Up for the Gievaway!" text="Grab your ninja swag!" />
 </template>
 
 <script>
-import Modal from './components/Modal.vue'
+import Modal from "./components/Modal.vue";
 
 export default {
   name: "App",
-  components: {Modal},
+  components: { Modal },
   data() {
     return {
-      title: 'My first vue app'
-    }
+      title: "My first vue app",
+    };
   },
 };
 </script>
