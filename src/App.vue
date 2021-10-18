@@ -3,6 +3,10 @@
   <p>Welcome...</p>
   <div v-if="showModal">
     <Modal theme="sale" @close="toggleModal">
+      <template v-slot:links>
+        <a href="#">sign up now </a>
+        <a href="#">more info </a>
+      </template>
       <h1>Enter the giveaway!</h1>
       <p>Get your cool free stuff</p>
     </Modal>
