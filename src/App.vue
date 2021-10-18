@@ -2,7 +2,10 @@
   <h1>{{ title }}</h1>
   <p>Welcome...</p>
   <div v-if="showModal">
-    <Modal :header="header" :text="text" theme="sale" @close="toggleModal" />
+    <Modal theme="sale" @close="toggleModal">
+      <h1>Enter the giveaway!</h1>
+      <p>Get your cool free stuff</p>
+    </Modal>
   </div>
   <button @click.alt="toggleModal">open modal (alt)</button>
 </template>
